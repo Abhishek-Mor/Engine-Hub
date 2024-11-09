@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        h1{
+            align-content: center;
+            justify-content: center;
+        }
+        a {
+            color: rgb(0, 77, 210); /* Change this to your desired color */
+            text-decoration: none; /* Optional: Remove underline *;
+        }
+
+        a:hover {
+            color: rgb(255, 88, 4); /* Change color on hover */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, white, skyblue,white);
+        
+            display: flex;
+            background-size: cover;
+            background-position: center;  
+            align-content: center;
+            align-items:center;
+            justify-content:center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            height:fit-content;
+            background: linear-gradient(to right, white, skyblue,white);
+        }
+
+        .login-container h2 {
+            margin: 0 0 20px;
+            text-align: center;
+            color: rgb(254, 136, 2);
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgb(249, 138, 42,);
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color:orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .login-container button:hover {
+            background-color:orange;
+            align-items: center;
+        }
+
+        .login-container .skip {
+            margin-top: 10px;
+            text-align: center;
+            display: block;
+            color: #0051ff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .login-container .skip:hover {
+            color:orange
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>LOGIN</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button><br><br><a href="form.html">Didn't have any account?</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="html project home.html">Skip</a>
+    </div><img src="" alt="">
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'admin' && password === 'password') {
+                alert('Login successful!');
+            } else {
+                alert('Incorrect username or password.');
+            }
+        }
+
+        function skip() {
+            alert('Skipped login.');
+        }
+    </script>
+</body>
+</html>
